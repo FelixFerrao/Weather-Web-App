@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+    body { background: url(https://openweathermap.org/themes/openweathermap/assets/img/new-history-forecast-bulk.png); background-size: 100% 100%;}
+
+    .content{
+        text-align: center;
+    }
+
+    .container h1{
+        font-size: 3em;
+        color: #fff;
+        text-align: center;
+    }
+
+    .footer {
+        text-align: center;
+    }
+
+    </style>
+    <title>Weather Description</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.css" />
+</head>
+
+<body>
+    <section class="section">
+            <div class="container">
+                <h1 class="title">
+                    {{ weather_data.city }}
+                </h1>
+                <h1 class="title"> {{ weather_data.temperature }}° C</h1>
+            </div>
+        </div>
+    </section>
+    <section class="section">
+        <div class="media-content">
+            <div class="content">
+                <h3>Feels Like: {{ weather_data.feels_like }}° C</h3>
+                <h3>Maximum Temperature: {{ weather_data.max_temp }}° C</h3>
+                <h3>Minimum Temperature: {{ weather_data.min_temp }}° C</h3>
+                <h3>Humidity: {{ weather_data.humidity }} %</h3>
+                <h3>Pressure: {{ weather_data.pressure }} hPa</h3>
+                <h3>Wind Speed: {{ weather_data.wind_speed }} m/s</h3>
+            </div>
+        </div>
+
+    </section>
+    <footer class="footer">
+        <br>Weather Forecast Project
+    </footer>
+</body>
+</html>
